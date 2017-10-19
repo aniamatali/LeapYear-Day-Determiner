@@ -38,7 +38,7 @@ namespace Weekday.Models
     }
 
 
-    public int dayCalc()
+    public int dateCalc()
     {
       int dayMonth = 0;
       int leapDay = 0;
@@ -65,5 +65,46 @@ namespace Weekday.Models
       return totalDay;
     }
 
+    public string dayCalc(int totalDay)
+    {
+      if (totalDay % 7 == 0)
+      {
+        return  "Friday";
+      }
+      else if (totalDay % 7 == 1)
+      {
+        return  "Saturday";
+      }
+      else if (totalDay % 7 == 2)
+      {
+        return  "Sunday";
+      }
+      else if (totalDay % 7 == 3)
+      {
+        return  "Monday";
+      }
+      else if (totalDay % 7 == 4)
+      {
+        return  "Tuesday";
+      }
+      else if (totalDay % 7 == 5)
+      {
+        return  "Wednesday";
+      }
+      else if (totalDay % 7 == 6)
+      {
+        return  "Thursday";
+      }
+      else
+      {
+        return "blah";
+      }
     }
-  }
+
+
+
+
+    }
+
+
+    }

@@ -18,7 +18,7 @@ namespace Weekday.Tests
       int output = 366;
 
       //Act
-      int result = (newDay.dayCalc());
+      int result = (newDay.dateCalc());
       Console.WriteLine("result " + result);
 
       //Assert
@@ -35,7 +35,7 @@ namespace Weekday.Tests
       int output = 1462;
 
       //Act
-      int result = (newDay.dayCalc());
+      int result = (newDay.dateCalc());
       Console.WriteLine("result " + result);
 
       //Assert
@@ -52,7 +52,7 @@ namespace Weekday.Tests
       int output = 36160;
 
       //Act
-      int result = (newDay.dayCalc());
+      int result = (newDay.dateCalc());
       Console.WriteLine("result " + result);
 
       //Assert
@@ -69,7 +69,7 @@ namespace Weekday.Tests
       int output = 364878;
 
       //Act
-      int result = (newDay.dayCalc());
+      int result = (newDay.dateCalc());
       Console.WriteLine("result " + result);
 
       //Assert
@@ -83,10 +83,27 @@ namespace Weekday.Tests
       //Arrange
       Weekdayer newDay = new Weekdayer(1,1,12);
 
-      int output = 4017;
+      int output = 4018;
 
       //Act
-      int result = (newDay.dayCalc());
+      int result = (newDay.dateCalc());
+      Console.WriteLine("result " + result);
+
+      //Assert
+      Assert.AreEqual(result, output);
+
+    }
+
+    [TestMethod]
+    public void GetDayOfWeek()
+    {
+      //Arrange
+      Weekdayer newDay = new Weekdayer(1,1,1);
+
+      string output = "Saturday";
+
+      //Act
+      string result = (newDay.dayCalc(newDay.dateCalc()));
       Console.WriteLine("result " + result);
 
       //Assert
