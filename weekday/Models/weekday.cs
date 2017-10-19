@@ -18,7 +18,6 @@ namespace Weekday.Models
         _inputDay = inputDay;
         _inputMonth = inputMonth;
         _inputYear = inputYear;
-
       }
 
       public int GetDay()
